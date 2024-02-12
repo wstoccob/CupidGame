@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using CupidGame.Objects;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -9,16 +10,21 @@ public class MainGame : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+    private Canvas _canvas;
+    private Sprite _sprite;
+
     public MainGame()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        
     }
 
     protected override void Initialize()
     {
-       
+        _canvas = new Canvas(_graphics.GraphicsDevice, 300, 200);
+        _sprite = new Sprite(Content.Load<Texture2D>("mainMenu"), new Vector2(0, 0), 0);
         base.Initialize();
     }
 
@@ -38,8 +44,13 @@ public class MainGame : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-
+        _canvas.Activate();
+        _spriteBatch.Begin();
+        // TODO: add your drawing logic to the target
+        _sprite.Render(_spriteBatch);
+        _spriteBatch.End();
+        _canvas.Draw(_spriteBatch);
+        
         base.Draw(gameTime);
     }
 }
