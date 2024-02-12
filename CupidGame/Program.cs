@@ -1,2 +1,2 @@
-﻿using var game = new CupidGame.Game1();
+﻿using var game = new CupidGame.MainGame();
 game.Run();
