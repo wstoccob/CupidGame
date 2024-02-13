@@ -20,6 +20,9 @@ public class MainGame : Game
     private Sprite _heartTwo;
     private Sprite _menuText;
 
+    private Sprite _yesButton;
+    private Sprite _noButton;
+
     private Vector2 _heartOneStartPosition;
     private Vector2 _heartTwoStartPosition;
 
@@ -46,6 +49,9 @@ public class MainGame : Game
         _heartOne = new Sprite(LoadTexture("heart"), _heartOneStartPosition, 4);
         _heartTwo = new Sprite(LoadTexture("heart"), _heartTwoStartPosition, 4);
         _menuText = new Sprite(LoadTexture("menuText"), new Vector2(754, 500), 2);
+
+        _yesButton = new Sprite(LoadTexture("yesButton"), new Vector2(961, 552), 6);
+        _noButton = new Sprite(LoadTexture("noButton"), new Vector2(860, 552), 6);
         
         _canvas.SetDestinationRectangle();
         base.Initialize();
@@ -58,6 +64,7 @@ public class MainGame : Game
         _spriteList.Add(_heartOne);
         _spriteList.Add(_heartTwo);
         _spriteList.Add(_menuText);
+        _spriteList.Add(_yesButton);
     }
 
     protected override void Update(GameTime gameTime)
