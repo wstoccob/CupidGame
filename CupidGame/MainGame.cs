@@ -51,7 +51,7 @@ public class MainGame : Game
         _menuText = new Sprite(LoadTexture("menuText"), new Vector2(754, 500), 2);
 
         _yesButton = new Sprite(LoadTexture("yesButton"), new Vector2(961, 552), 6);
-        _noButton = new Sprite(LoadTexture("noButton"), new Vector2(860, 552), 6);
+        _noButton = new Sprite(LoadTexture("noButton"), new Vector2(760, 552), 6);
         
         _canvas.SetDestinationRectangle();
         base.Initialize();
@@ -65,6 +65,7 @@ public class MainGame : Game
         _spriteList.Add(_heartTwo);
         _spriteList.Add(_menuText);
         _spriteList.Add(_yesButton);
+        _spriteList.Add(_noButton);
     }
 
     protected override void Update(GameTime gameTime)
