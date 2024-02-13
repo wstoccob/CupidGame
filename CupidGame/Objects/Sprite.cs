@@ -5,7 +5,7 @@ namespace CupidGame;
 
 public class Sprite
 {
-    private Vector2 Position { get; set; }
+    public Vector2 Position { get; set; }
     private Texture2D _texture;
     public int _zIndex;
 

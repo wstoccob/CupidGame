@@ -20,6 +20,9 @@ public class MainGame : Game
     private Sprite _heartTwo;
     private Sprite _menuText;
 
+    private Vector2 _heartOneStartPosition;
+    private Vector2 _heartTwoStartPosition;
+
     public MainGame()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -33,13 +36,16 @@ public class MainGame : Game
         _graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
         _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
         _graphics.ApplyChanges();
+
+        _heartOneStartPosition = new Vector2(-200, 400);
+        _heartTwoStartPosition = new Vector2(1100, -200);
         
         _canvas = new Canvas(_graphics.GraphicsDevice, 1920, 1080);
         _spriteList = new List<Sprite>();
         _mainMenu = new Sprite(LoadTexture("mainMenu"), new Vector2(0, 0), 0);
-        _heartOne = new Sprite(LoadTexture("heart"), new Vector2(10, 10), 1);
-        _heartTwo = new Sprite(LoadTexture("heart"), new Vector2(500, 500), 1);
-        _mainText = 
+        _heartOne = new Sprite(LoadTexture("heart"), _heartOneStartPosition, 4);
+        _heartTwo = new Sprite(LoadTexture("heart"), _heartTwoStartPosition, 4);
+        _menuText = new Sprite(LoadTexture("menuText"), new Vector2(754, 500), 2);
         
         _canvas.SetDestinationRectangle();
         base.Initialize();
@@ -51,6 +57,7 @@ public class MainGame : Game
         _spriteList.Add(_mainMenu);
         _spriteList.Add(_heartOne);
         _spriteList.Add(_heartTwo);
+        _spriteList.Add(_menuText);
     }
 
     protected override void Update(GameTime gameTime)
@@ -58,6 +65,9 @@ public class MainGame : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
             Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+
+        MoveHeart(_heartOne, _heartOneStartPosition);
+        MoveHeart(_heartTwo, _heartTwoStartPosition);
 
         base.Update(gameTime);
     }
@@ -82,5 +92,18 @@ public class MainGame : Game
     private Texture2D LoadTexture(string assetName)
     {
         return Content.Load<Texture2D>(assetName);
+    }
+
+    private void MoveHeart(Sprite heart, Vector2 startPosition)
+    {
+        int movingSpeed = 5;
+
+        heart.Position = new Vector2(heart.Position.X + movingSpeed, heart.Position.Y + movingSpeed);
+
+        if (heart.Position.Y >= 1200 || heart.Position.X >= 2100)
+        {
+            heart.Position = new Vector2(startPosition.X, startPosition.Y);
+        }
+        
     }
 }

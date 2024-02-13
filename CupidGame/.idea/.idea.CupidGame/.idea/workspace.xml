@@ -10,8 +10,9 @@
     <list default="true" id="413e5dca-4d50-4f62-9d39-b292803e3e60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CupidGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CupidGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Content.mgcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/mainMenu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Content/mainMenu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/menuText.png" beforeDir="false" afterPath="$PROJECT_DIR$/Content/menuText.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Sprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Sprite.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707747081054</updated>
       <workItem from="1707747082992" duration="3520000" />
-      <workItem from="1707833413096" duration="1985000" />
+      <workItem from="1707833413096" duration="3892000" />
     </task>
     <servers />
   </component>
