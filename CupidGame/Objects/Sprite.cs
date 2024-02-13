@@ -6,8 +6,9 @@ namespace CupidGame;
 public class Sprite
 {
     public Vector2 Position { get; set; }
-    private Texture2D _texture;
+    public Texture2D _texture;
     public int _zIndex;
+    public bool _exists = true;
 
     public Sprite(Texture2D texture, Vector2 position, int zIndex)
     {
