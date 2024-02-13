@@ -76,7 +76,10 @@ public class MainGame : Game
         _yesRectangle = new Rectangle((int)_yesButtonPosition.X, (int)_yesButtonPosition.Y, _yesButton._texture.Width,
             _yesButton._texture.Height);
 
-        _bigMenu = new Sprite(LoadTexture("bigMenu"), new Vector2(0, 0), 0);
+        _bigMenu = new Sprite(LoadTexture("bigMenu"), new Vector2(0, 0), -1)
+        {
+            _exists = false
+        };
         
         _canvas.SetDestinationRectangle();
         base.Initialize();
@@ -91,6 +94,8 @@ public class MainGame : Game
         _spriteList.Add(_menuText);
         _spriteList.Add(_yesButton);
         _spriteList.Add(_noButton);
+        _spriteList.Add(_bigMenu);
+        
     }
 
     protected override void Update(GameTime gameTime)
@@ -122,14 +127,12 @@ public class MainGame : Game
                     _spriteList.RemoveAll(sprite => sprite._exists == true);
                 }
             }
-            else
-            {
-                _spriteList.Add(_bigMenu);
-            }
+            
 
             MoveHeart(_heartOne, _heartOneStartPosition);
             MoveHeart(_heartTwo, _heartTwoStartPosition);
         }
+        
 
         base.Update(gameTime);
     }
