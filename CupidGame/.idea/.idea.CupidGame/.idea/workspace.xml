@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="413e5dca-4d50-4f62-9d39-b292803e3e60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CupidGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CupidGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CupidGame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CupidGame.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainGame.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <workItem from="1707747082992" duration="3520000" />
       <workItem from="1707833413096" duration="10024000" />
       <workItem from="1707844320353" duration="1000" />
-      <workItem from="1707844351992" duration="467000" />
+      <workItem from="1707844351992" duration="822000" />
     </task>
     <servers />
   </component>
